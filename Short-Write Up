@@ -1,0 +1,31 @@
+ Analysis of Crypto Trader Behavior Across Market Sentiment Regimes
+
+ 1. Methodology
+
+a) Data Auditing & Cleaning:** Audited `historical_data.csv` (211,224 trade logs across 32 unique accounts) and `fear_greed_index.csv` (2,644 daily sentiment records). Both datasets were confirmed to contain 0 missing values and 0 duplicate entries.
+
+b) Temporal Alignment:** Timestamps (Timestamp IST) were converted into standard daily strings (YYYY-MM-DD) and joined via an inner join with daily sentiment classifications spanning May 2023 to May 2025.
+
+c) Feature Aggregation:** Aggregated trade logs at the trader-day level to engineer daily behavior and performance metrics: Daily Net PnL, Win Rate (Winning Trades / Total Trades), Daily Trade Count (Frequency), Average Position Size (Size USD), and Long/Short execution ratios.
+
+
+ 2. Core Insights
+
+a) Fear Volatility Drives Peak Aggregate Profitability:** Contrary to popular intuition, traders generate higher average daily net PnL during Fear regimes ($5,185.15) than during Greed regimes ($4,144.21). Macro fear creates heightened market volatility and pricing inefficiencies, yielding higher-value trading opportunities.
+
+b) Trader Execution Velocity Spikes During Fear:** Traders significantly scale trade frequency during Fear days (105.36 trades/day) compared to Greed days (76.91 trades/day). Average total daily trading volume per trader more than doubles during Fear regimes ($756,720.32 vs. $351,829.35).
+
+c) High Execution Frequency Scales Long-Term Returns:** Segmenting accounts by activity level reveals that Frequent Traders capture $496,527.66 in average net PnL compared to $144,377.77 for Infrequent Traders. Systematic, high-frequency execution scales far better than low-frequency swing trading.
+
+ 3. Actionable Strategy Recommendations
+
+Strategy Recommendation 1 — Dynamic Liquidity Deployment (Fear Strategy)
+
+Rule: Expand automated execution allowances and increase trade frequency parameters during market Fear regimes.
+
+Rationale: Fear environments offer broader market turnover, higher volume, and higher average daily net profits per trader ($5,185.15/day).
+
+ Strategy Recommendation 2 — Position Sizing Risk Guardrails (Greed Strategy)
+Rule: Enforce a strict 20% cap on maximum allowable individual position size during Extreme Greed days.
+
+Rationale: Lower trading frequency during Greed periods combined with overextended position sizes exposes traders to severe tail-risk drawdowns when markets experience sharp, unexpected trend reversals.
