@@ -22,6 +22,8 @@ TABLES:
 | Inconsistent Traders | $89,766.80 | 69.43% | 3,996.57 |
 
 CHARTS:
-Chart 1 — Average Daily PnL per Trader ($): Shows a clear bar comparison where Fear days ($5,185.15) outperform Greed days ($4,144.21) and Neutral days ($3,438.62)
+Chart 1  Average Daily PnL per Trader ($)
+[Average Daily PnL per Trader](chart1.png) 
 
-Chart 2 — Daily Execution Frequency: Demonstrates that trading velocity spikes during Fear days (105.36 trades/day) compared to Greed days (76.91 trades/day).
+Chart 2 — Daily Execution Frequency
+[Daily Execution Frequency](chart2.png) 
